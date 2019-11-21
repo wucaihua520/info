@@ -30,4 +30,9 @@ def create_app(config_name):
     CSRFProtect(app)
     # 设置session
     Session(app)
+
+    #注册蓝图
+    from infomation.modules.index import index_blu
+    app.register_blueprint(index_blu)
+
     return app

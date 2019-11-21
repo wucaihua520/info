@@ -11,9 +11,5 @@ Migrate(app,db)
 manage.add_command('db',MigrateCommand)
 
 
-@app.route('/')
-def index():
-    return 'index'
-
 if __name__ == '__main__':
     app.run()
